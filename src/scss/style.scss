@@ -1,0 +1,213 @@
+$font-stack: "DM Sans";
+$primary-color: hsl(10, 79%, 65%);
+$secondary-color: hsl(186, 34%, 60%);
+$base: 400;
+$dark-brown: hsl(25, 47%, 15%);
+$breakpoint-small: 400px;
+$breakpoint-md: 530px;
+
+#root {
+  max-width: 1240px;
+}
+
+body {
+  background-color: hsl(27, 66%, 92%);
+  display: flex;
+  place-content: center;
+  padding: 0;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+}
+.App {
+  width: 505px;
+  padding: 0;
+  margin: 10.55rem auto;
+  font-family: $font-stack, Arial;
+  font-weight: $base;
+}
+
+.header {
+  background-color: $primary-color;
+  width: 100%;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  border-radius: 1rem;
+  font-weight: $base;
+
+  p {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    opacity: 0.8;
+  }
+  h1 {
+    margin-left: 1.8rem;
+    margin-top: 0rem;
+  }
+  img {
+    margin-right: 2.11rem;
+  }
+}
+
+.content {
+  margin-top: 1.4rem;
+  background-color: hsl(33, 100%, 98%);
+  color: $dark-brown;
+  border-radius: 1rem;
+  padding: 2.3rem;
+
+  .bars {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    margin-top: 4.2rem;
+    align-items: baseline;
+
+    #active {
+      background-color: $secondary-color;
+      border-radius: 5px;
+    }
+    #active:hover {
+      background-color: lighten($color: $secondary-color, $amount: 5);
+    }
+
+    .single_bar:nth-of-type(1) {
+      order: 9999;
+    }
+    .single_bar p {
+      text-align: center;
+      color: #7c7c7c;
+      margin-top: 5px;
+      align-self: baseline;
+    }
+
+    .height {
+      background-color: $primary-color;
+      border-radius: 5px;
+    }
+    .height:hover {
+      background-color: lighten($color: $primary-color, $amount: 5);
+    }
+    .active {
+      background-color: $secondary-color;
+      border-radius: 5px;
+    }
+    .active:hover {
+      background-color: lighten($color: $secondary-color, $amount: 5);
+    }
+  }
+
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  small {
+    color: #7c7c7c;
+    font-weight: $base;
+    font-size: 1.2rem;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -1.8rem;
+    p {
+      margin-top: 0.3rem;
+      font-size: 3.15rem;
+      font-weight: 800;
+    }
+    #percent {
+      margin-bottom: 0.2rem;
+      margin-top: 0.7rem;
+      text-align: end;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+
+
+@media (max-width: ($breakpoint-md)) {
+  #root {
+    min-width: 70vw;
+  }
+  .App {
+
+    max-width: 94vw;
+
+    .content {
+      .bars {
+        gap: 0.6rem;
+        margin-top: 3.2rem;
+        align-items: baseline;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  body {
+    padding: 0;
+  }
+  #root {
+    min-width: 90vw;
+  }
+  .App {
+    width: 100%;
+    margin: 5rem auto;
+    // width: 100vw;
+  }
+
+  .header {
+    h1 {
+      margin-left: 1.8rem;
+      font-size: 2rem;
+    }
+    img {
+      margin-right: 2.11rem;
+    }
+  }
+
+  .content {
+    padding: 1.4rem;
+    h1 {
+      font-size: 1.35rem;
+      margin-left: 0;
+    }
+    .bars {
+      gap: 0.5rem;
+      margin-top: 3.2rem;
+      align-items: baseline;
+    }
+
+    hr {
+      margin-top: 1rem;
+      margin-bottom: 1.8rem;
+    }
+    small {
+      color: #7c7c7c;
+      font-weight: $base;
+      font-size: 1rem;
+    }
+    .footer {
+      margin-bottom: -1.8rem;
+      padding-bottom: 1rem;
+      p {
+        margin-top: 0.3rem;
+        font-size: 2.15rem;
+      }
+      #percent {
+        margin-bottom: 0.2rem;
+        margin-top: 0.7rem;
+        text-align: end;
+        font-size: 1.1rem;
+      }
+
+      & > div {
+        margin-top: -1rem;
+      }
+    }
+  }
+}

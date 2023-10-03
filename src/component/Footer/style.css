@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+  place-content: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  top: 1024px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 400px){
+  .attribution{
+    top: 800px;
+  }
+}

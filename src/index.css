@@ -1,0 +1,7 @@
+:root {
+  display: flex;
+  place-content: center;
+}
+body{
+  margin: 0;
+}
