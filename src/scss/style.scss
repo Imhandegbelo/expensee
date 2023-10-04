@@ -64,7 +64,7 @@ main {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 1rem;
-    margin-top: 4.2rem;
+    margin-top: 2.8rem;
     align-items: baseline;
 
     #active {
@@ -141,7 +141,7 @@ main {
     .content {
       .bars {
         gap: 0.6rem;
-        margin-top: 3.2rem;
+        margin-top: 2.2rem;
         align-items: baseline;
       }
     }
@@ -179,7 +179,7 @@ main {
     }
     .bars {
       gap: 0.5rem;
-      margin-top: 3.2rem;
+      margin-top: 2.2rem;
       align-items: baseline;
     }
 
@@ -194,7 +194,7 @@ main {
     }
     .footer {
       margin-bottom: -1.8rem;
-      padding-bottom: 1rem;
+      // padding-bottom: 1rem;
       p {
         margin-top: 0.3rem;
         font-size: 2.15rem;
