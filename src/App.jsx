@@ -1,26 +1,11 @@
 import logo from "./assets/logo.svg";
 import "./scss/style.scss";
 import Footer from "./component/Footer";
-import { useState, useEffect } from "react";
+import data from "../data.json";
 
 function App() {
-  const [data, setData] = useState([]);
   const date = new Date(Date());
   const today = date.getDay();
-
-  const getData = () => {
-    fetch("data.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data);
-      });
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
 
   return (
     <div className="App">
@@ -38,12 +23,15 @@ function App() {
             data.length > 0 &&
             data.map((days, index) => (
               <div className="single_bar" key={days.day}>
-                <div
-                  id={`${days.day}`}
-                  style={{ height: `${days.amount * 3.1}px` }}
-                  className={`${index === today ? "active" : "height"}`}
-                />
-                <p>{days.day}</p>
+                {/* <div>{days.amount}</div> */}
+                <div className="single_r">
+                  <div
+                    id={`${days.day}`}
+                    style={{ height: `${days.amount * 3.1}px` }}
+                    className={`${index === today ? "active" : "height"}`}
+                  />
+                  <p>{days.day}</p>
+                </div>
               </div>
             ))}
         </div>

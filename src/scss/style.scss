@@ -8,6 +8,7 @@ $breakpoint-md: 530px;
 
 #root {
   max-width: 1240px;
+  height: 100vh;
 }
 
 body {
@@ -73,6 +74,7 @@ main {
     #active:hover {
       background-color: lighten($color: $secondary-color, $amount: 5);
     }
+    
 
     .single_bar:nth-of-type(1) {
       order: 9999;
@@ -134,7 +136,6 @@ main {
     min-width: 70vw;
   }
   .App {
-
     max-width: 94vw;
 
     .content {
