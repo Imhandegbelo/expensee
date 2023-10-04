@@ -58,7 +58,7 @@ main {
   background-color: hsl(33, 100%, 98%);
   color: $dark-brown;
   border-radius: 1rem;
-  padding: 2.3rem;
+  padding: 1rem 2.2rem;
 
   .bars {
     display: grid;
@@ -74,7 +74,6 @@ main {
     #active:hover {
       background-color: lighten($color: $secondary-color, $amount: 5);
     }
-    
 
     .single_bar:nth-of-type(1) {
       order: 9999;
@@ -129,8 +128,6 @@ main {
   }
 }
 
-
-
 @media (max-width: ($breakpoint-md)) {
   #root {
     min-width: 70vw;
@@ -163,6 +160,7 @@ main {
 
   .header {
     h1 {
+      // padding-top: -2rem;
       margin-left: 1.8rem;
       font-size: 2rem;
     }
